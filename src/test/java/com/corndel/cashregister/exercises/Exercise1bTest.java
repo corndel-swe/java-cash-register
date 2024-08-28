@@ -1,49 +1,22 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
+package com.corndel.cashregister.exercises;
 
-import org.junit.jupiter.api.Test;
+import static com.corndel.cashregister.exercises.Exercise1b.renameBook;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import com.corndel.cashregister.exercises.models.RecipeBook;
 import java.util.ArrayList;
-import java.util.List;
+import org.junit.jupiter.api.Test;
 
-// Class representing a Recipe Book
-class RecipeBook {
-    String title;
-    List<String> recipes;
+public class Exercise1bTest {
+  @Test
+  // Test for renaming the recipe book
+  void testRenameBook() {
+    RecipeBook recipeBook = new RecipeBook("My Recipe Book", new ArrayList<>());
 
-    RecipeBook(String title, List<String> recipes) {
-        this.title = title;
-        this.recipes = recipes;
-    }
+    String newName = "Good Eats";
+    RecipeBook expectedBook = new RecipeBook(newName, new ArrayList<>());
 
-    // Overriding equals to allow object comparison in tests
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-
-        RecipeBook that = (RecipeBook) obj;
-
-        if (!title.equals(that.title)) return false;
-        return recipes.equals(that.recipes);
-    }
-}
-
-public class RenameBookTest {
-
-    // This method is analogous to the renameBook function in the original code.
-    // It renames the recipe book and returns the modified book.
-    public RecipeBook renameBook(RecipeBook book, String newTitle) {
-        return new RecipeBook(newTitle, book.recipes);
-    }
-
-    @Test
-    // Test for renaming the recipe book
-    void testRenameBook() {
-        RecipeBook recipeBook = new RecipeBook("My Recipe Book", new ArrayList<>());
-
-        String newName = "Good Eats";
-        RecipeBook expectedBook = new RecipeBook(newName, new ArrayList<>());
-
-        // Check if the book is renamed correctly
-        assertEquals(expectedBook, renameBook(recipeBook, newName));
-    }
+    // Check if the book is renamed correctly
+    assertThat(renameBook(recipeBook, newName)).usingRecursiveComparison().isEqualTo(expectedBook);
+  }
 }
