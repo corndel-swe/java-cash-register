@@ -1,67 +1,44 @@
+package com.corndel.cashregister;
+
+import static com.corndel.cashregister.Level4.canMakeAmount;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.Test;
-import java.util.ArrayList;
+import com.corndel.cashregister.models.Item;
 import java.util.List;
+import org.junit.jupiter.api.Test;
 
-// Class representing an Item in the drawer (either a coin or a note)
-class Item {
-    String name;
-    int value;
-    int quantity;
+public class Level4Test {
+  @Test
+  // Test to ensure the function returns false when the amount cannot be made
+  void testCannotMakeAmount() {
+    List<Item> drawer =
+        List.of(
+            new Item("ten", 1000, 1),
+            new Item("five", 500, 1),
+            new Item("one", 100, 2),
+            new Item("quarter", 25, 3),
+            new Item("dime", 10, 0),
+            new Item("nickel", 5, 0),
+            new Item("penny", 1, 2));
 
-    Item(String name, int value, int quantity) {
-        this.name = name;
-        this.value = value;
-        this.quantity = quantity;
-    }
-}
+    // Check if the function returns false when the amount cannot be made
+    assertEquals(false, canMakeAmount(613, drawer));
+  }
 
-public class CanMakeAmountTest {
+  @Test
+  // Test to ensure the function returns true when the amount can be made
+  void testCanMakeAmount() {
+    List<Item> drawer =
+        List.of(
+            new Item("ten", 1000, 1),
+            new Item("five", 500, 1),
+            new Item("one", 100, 2),
+            new Item("quarter", 25, 3),
+            new Item("dime", 10, 0),
+            new Item("nickel", 5, 0),
+            new Item("penny", 1, 2));
 
-    // This method is analogous to the canMakeAmount function in the original code.
-    // It checks if the exact amount can be made using the items in the drawer.
-    public boolean canMakeAmount(int amount, List<Item> drawer) {
-        for (Item item : drawer) {
-            int itemTotalValue = item.value * item.quantity;
-            if (itemTotalValue <= amount) {
-                amount -= itemTotalValue;
-            } else {
-                amount -= (amount / item.value) * item.value;
-            }
-        }
-        return amount == 0;
-    }
-
-    @Test
-    // Test to ensure the function returns false when the amount cannot be made
-    void testCannotMakeAmount() {
-        List<Item> drawer = new ArrayList<>();
-        drawer.add(new Item("ten", 1000, 1));
-        drawer.add(new Item("five", 500, 1));
-        drawer.add(new Item("one", 100, 2));
-        drawer.add(new Item("quarter", 25, 3));
-        drawer.add(new Item("dime", 10, 0));
-        drawer.add(new Item("nickel", 5, 0));
-        drawer.add(new Item("penny", 1, 2));
-        
-        // Check if the function returns false when the amount cannot be made
-        assertEquals(false, canMakeAmount(613, drawer));
-    }
-
-    @Test
-    // Test to ensure the function returns true when the amount can be made
-    void testCanMakeAmount() {
-        List<Item> drawer = new ArrayList<>();
-        drawer.add(new Item("ten", 1000, 1));
-        drawer.add(new Item("five", 500, 1));
-        drawer.add(new Item("one", 100, 2));
-        drawer.add(new Item("quarter", 25, 3));
-        drawer.add(new Item("dime", 10, 0));
-        drawer.add(new Item("nickel", 5, 0));
-        drawer.add(new Item("penny", 1, 2));
-        
-        // Check if the function returns true when the amount can be made
-        assertEquals(true, canMakeAmount(1651, drawer));
-    }
+    // Check if the function returns true when the amount can be made
+    assertEquals(true, canMakeAmount(1651, drawer));
+  }
 }
