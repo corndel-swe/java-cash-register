@@ -2,7 +2,7 @@
 
 > [!NOTE]
 >
-> You can test the functions using `npm run test:level-1` and similar.
+> You can test the functions using `./mvnw clean test -Dtest=Level1Test` and similar.
 
 ## Priority
 

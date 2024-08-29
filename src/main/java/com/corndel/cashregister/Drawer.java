@@ -10,7 +10,7 @@ import java.util.List;
  * https://blog.agentrisk.com/you-better-work-in-cents-not-dollars-2edb52cdf308
  */
 public class Drawer {
-  List<Item> drawer =
+  public static List<Item> drawer =
       List.of(
           new Item("hundred", 10000, 1),
           new Item("twenty", 2000, 3),
@@ -21,8 +21,4 @@ public class Drawer {
           new Item("dime", 10, 31),
           new Item("nickel", 5, 41),
           new Item("penny", 1, 72));
-
-  public static void main(String[] args) {
-    // Do something with the drawer
-  }
 }

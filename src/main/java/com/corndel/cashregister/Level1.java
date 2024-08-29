@@ -31,4 +31,9 @@ public class Level1 {
     // code here
     return null;
   }
+
+  public static void main(String[] args) {
+    removeItem("penny", Drawer.drawer);
+    System.out.println(Drawer.drawer.getLast().getValue());
+  }
 }

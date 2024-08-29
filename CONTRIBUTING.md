@@ -4,8 +4,8 @@ Welcome to the cash register project!
 
 A few things you should know:
 
-- The functions in `lib` are designed to work with a "drawer" full of money.
-  Take a look at `drawer.js` to see what one looks like.
+- The static methods in `cashregister` are designed to work with a "drawer" full of money.
+  Take a look at `Drawer.java` to see what one looks like.
 
 - Currency is in USD: penny, nickel, dime and quarter are coins; everything else
   is a note
@@ -17,19 +17,20 @@ A few things you should know:
   `value` of `210` means $2.10.
   [Want to know why?](https://blog.agentrisk.com/you-better-work-in-cents-not-dollars-2edb52cdf308)
 
-- Debugging! You will probably want to do some `console.log` to debug. The
-  `drawer.js` has been imported into each file, so you can do, for example
+- Debugging! You will probably want to do some `console.log` to debug. The `drawer.js` has been imported into each file, so you can do, for example
 
-  ```js
-  // level-1.js
-  removeItem('penny', drawer)
-  console.log(drawer)
+  ```java
+  // Level1.java
+  public static void main(String[] args) {
+    removeItem("penny", Drawer.drawer);
+    System.out.println(Drawer.drawer.getLast().getValue());
+  }
   ```
 
   then run
 
-  ```bash
-  node lib/level-1.js
+  ```
+  ./mvnw clean compile exec:java -Dexec.mainClass=com.corndel.cashregister/Level1.java
   ```
 
   to see what happens.
