@@ -10,35 +10,6 @@ public class Exercise3a {
    */
   public static Recipe lastRecipe(RecipeBook recipeBook) {
     // code here
-    // return null;
-
-    // TODO: Remove Solution
-    if (recipeBook.getRecipes().size() == 0) return null;
-    return recipeBook.getRecipes().getLast();
+    return null;
   }
 }
-//
-// // we"ve provided a sample object for debugging:
-// const recipeBook = {
-//   title: "My Recipe Book",
-//   recipes: [
-//     {
-//       name: "Spaghetti Bolognese",
-//       ingredients: ["spaghetti", "beef", "tomato sauce"],
-//       servings: 4,
-//       isVegetarian: false
-//     },
-//
-//     {
-//       name: "Vegetable Stir Fry",
-//       ingredients: ["broccoli", "carrots", "bell peppers", "soy sauce"],
-//       servings: 2,
-//       isVegetarian: true
-//     }
-//   ]
-// }
-//
-// // don"t change below
-// export default lastRecipe
-//
-// }

@@ -17,16 +17,6 @@ public class Level4 {
    */
   public static boolean canMakeAmount(int target, List<Item> drawer) {
     // code here
-    // return false;
-
-    for (Item item : drawer) {
-      int itemTotalValue = item.getValue() * item.getQuantity();
-      if (itemTotalValue <= target) {
-        target -= itemTotalValue;
-      } else {
-        target -= (target / item.getValue()) * item.getValue();
-      }
-    }
-    return target == 0;
+    return false;
   }
 }

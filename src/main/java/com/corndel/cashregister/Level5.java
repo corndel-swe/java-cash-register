@@ -26,26 +26,6 @@ public class Level5 {
    */
   public static List<Item> transaction(int cost, int paid, List<Item> drawer) {
     // code here
-    // return null;
-
-    int change = paid - cost;
-
-    // Start with the largest denomination and work downwards
-    for (Item item : drawer) {
-      while (change >= item.getValue() && item.getQuantity() > 0) {
-        change -= item.getValue();
-        item.setQuantity(item.getQuantity() - 1);
-      }
-    }
-
-    // Add the paid amount to the drawer
-    for (Item item : drawer) {
-      if (item.getValue() == paid) {
-        item.setQuantity(item.getQuantity() + 1);
-        break;
-      }
-    }
-
-    return drawer;
+    return null;
   }
 }

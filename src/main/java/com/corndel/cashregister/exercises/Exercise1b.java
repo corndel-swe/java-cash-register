@@ -11,10 +11,6 @@ public class Exercise1b {
    */
   public static RecipeBook renameBook(RecipeBook recipeBook, String newName) {
     // code here
-    // return null;
-
-    recipeBook.setTitle(newName);
-
-    return recipeBook;
+    return null;
   }
 }

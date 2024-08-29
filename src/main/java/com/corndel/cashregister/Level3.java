@@ -18,10 +18,6 @@ public class Level3 {
    */
   public static String sumDrawer(List<Item> drawer) {
     // code here
-    // return null;
-
-    int totalCents = drawer.stream().mapToInt(item -> item.getValue() * item.getQuantity()).sum();
-    double totalDollars = totalCents / 100.0;
-    return String.format("$%.2f", totalDollars);
+    return null;
   }
 }

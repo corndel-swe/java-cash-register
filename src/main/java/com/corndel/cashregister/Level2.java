@@ -16,14 +16,7 @@ public class Level2 {
    */
   public static int countCoins(List<Item> drawer) {
     // code here
-    // return 0;
-    return drawer.stream()
-        .filter(
-            item ->
-                item.getValue()
-                    < 100) // Assuming coins have a value less than 100 (less than a dollar)
-        .mapToInt(Item::getQuantity)
-        .sum();
+    return 0;
   }
 
   /**
@@ -34,14 +27,6 @@ public class Level2 {
    */
   public static int countNotes(List<Item> drawer) {
     // code here
-    // return 0;
-
-    return drawer.stream()
-        .filter(
-            item ->
-                item.getValue()
-                    >= 100) // Assuming notes have a value of 100 or more (a dollar or more)
-        .mapToInt(Item::getQuantity)
-        .sum();
+    return 0;
   }
 }
