@@ -14,21 +14,65 @@ point-of-sale systems around the country.
    - [bash](https://tech-docs.corndel.com/bash/)
    - [vscode](https://tech-docs.corndel.com/vscode/)
    - [git](https://tech-docs.corndel.com/git/)
-   - [node & npm](https://tech-docs.corndel.com/js/installation.html)
+   - [java and maven](https://tech-docs.corndel.com/java/installation.html)
 
-1. Clone the repository (i.e. download it), so you have a copy on your machine.
+1. Clone the repository (i.e. download it), so you have a copy on your machine:
+
+   ```bash
+   git clone <your-repository-url>
+   ```
 
 1. Once cloned, open a terminal in the project folder, and run
 
    ```bash
-   npm install
+   ./mvnw clean compile
    ```
 
    to install dependencies.
 
+## Running tests
+
+To check if your solution for one of the exercises has worked, you can run the
+tests.
+
+You can choose from either method below:
+
+### Option 1: Using VS Code
+
+You can open up the "Testing" tab and press play on the test or group of tests
+you want to run.
+
+<p align="center">
+  <img src="assets/image.png" width="250px"></img>
+</p>
+
+### Option 2: Using the CLI
+
+To check if your solution for one of the exercises has worked, you can run the
+command
+
+```bash
+./mvnw test
+```
+
+in the terminal.
+
+> [!TIP]
+>
+> You can choose which test to run using the `-Dtest=` parameter. E.g. Runnning
+>
+> ```bash
+> ./mvnw test -Dtest=Exercise1aTest
+> ```
+>
+> in the terminal will test only the `Exercise1a.java` code using the
+> `Exercise1aTest.java` test file.
+
 ## Deep dive
 
-Before working on the functions, let's learn how to work with objects.
+Before working on Cash Register, there are a few things we need to learn. There
+are some documentation pages which will teach you what you need to know, and
+some exercises for you to practice your skills.
 
 ```mermaid
 flowchart TD
@@ -43,37 +87,41 @@ flowchart TD
     D --> A
 ```
 
-> [!NOTE]
->
-> You can test the exercises using `npm run test:1a` and similar.
+### Object basics
 
-### Object properties
+1. Read the docs on
+   [object basics](https://tech-docs.corndel.com/java/object-basics.html) and
+   [classes and instances](https://tech-docs.corndel.com/java/classes-and-instances.html).
 
-1. Read through [objects](https://tech-docs.corndel.com/js/objects.html) and
-   [object tricks](https://tech-docs.corndel.com/js/object-tricks.html)
+1. Complete Exercise 1a:
 
-1. Solve, commit and push [exercise 1a](./exercises/1a.js)
+   - Run the tests in to see if you got it right!
 
-1. Solve, commit and push [exercise 1b](./exercises/1b.js)
+   - Once you pass the tests, type `git commit -am "Solves 1a"` in the terminal
+     and hit enter to commit your solution.
+
+   - Now run `git push` to sync your changes to github.
+
+1. Solve, commit and push Exercise 1b.
 
 ### Lists of objects
 
-1. Read through
-   [lists of objects](https://tech-docs.corndel.com/js/lists-of-objects.html)
+1. Read the docs on
+   [lists of objects](https://tech-docs.corndel.com/java/lists-of-objects.html).
 
-1. Solve, commit and push [exercise 2a](./exercises/2a.js)
+1. Solve, commit and push Exercise 2a.
 
-1. Solve, commit and push [exercise 2b](./exercises/2b.js)
+1. Solve, commit and push Exercise 2b.
 
-### Object nesting
+### Object challenges
 
-1. Read through
-   [object nesting](https://tech-docs.corndel.com/js/object-nesting.html)
+1. Solve, commit and push Exercise 3a.
 
-1. Solve, commit and push [exercise 3a](./exercises/3a.js)
+1. Solve, commit and push Exercise 3b.
 
-1. Solve, commit and push [exercise 3b](./exercises/3b.js)
+## Moving on
 
-## Workshop
+Great job! With the deep dive taken care of, we're ready to build our PoS system
+(that's _Point of Sale_ :wink:).
 
-Head to `CONTRIBUTING.md` to find out how to contribute to this project!
+Find `CONTRIBUTING.md` to find out what to do.

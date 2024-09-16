@@ -5,8 +5,11 @@ import com.corndel.cashregister.exercises.models.RecipeBook;
 
 public class Exercise3a {
   /**
-   * Given a recipeBook containing recipes, returns the title of the last recipe in the array.
-   * Return null if there are no recipes
+   * https://tech-docs.corndel.com/java/classes-and-instances.html#composing-classes
+   * Given a recipeBook containing recipes, returns the title of the last recipe
+   * in the array.
+   * 
+   * Return null if there are no recipes.
    */
   public static Recipe lastRecipe(RecipeBook recipeBook) {
     // code here
