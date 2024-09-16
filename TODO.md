@@ -2,7 +2,8 @@
 
 > [!NOTE]
 >
-> You can test the functions using `./mvnw clean test -Dtest=Level1Test` and similar.
+> You can test the functions using `./mvnw clean test -Dtest=Level1Test` and
+> similar.
 
 ## Priority
 
