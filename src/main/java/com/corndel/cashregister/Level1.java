@@ -42,7 +42,7 @@ public class Level1 {
     removeItem("penny", Drawer.drawer);
 
     for (var item : Drawer.drawer) {
-      var summary = String.format("%s: %d", item.getName(), item.getQuantity());
+      var summary = String.format("%s: %d", item.name, item.quantity);
       System.out.println(summary);
     }
   }
