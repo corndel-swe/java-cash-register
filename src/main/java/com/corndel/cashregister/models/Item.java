@@ -1,9 +1,9 @@
 package com.corndel.cashregister.models;
 
 public class Item {
-  private String name;
-  private int value;
-  private int quantity;
+  public String name;
+  public int value;
+  public int quantity;
 
   public Item(String name, int value, int quantity) {
     this.name = name;
