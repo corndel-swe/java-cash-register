@@ -10,6 +10,9 @@ public class Exercise3a {
    * in the array.
    * 
    * Return null if there are no recipes.
+   * 
+   * Take a look in the models folder to see how the classes are
+   * composed.
    */
   public static Recipe lastRecipe(RecipeBook recipeBook) {
     // code here
