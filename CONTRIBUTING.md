@@ -4,14 +4,15 @@ Welcome to the cash register project!
 
 A few things you should know:
 
-- The static methods in `cashregister` are designed to work with a "drawer" full
+- The static methods in `cashregister` are designed to work with a `drawer` full
   of money. Take a look at `Drawer.java` to see what one looks like.
 
 - Currency is in USD: penny, nickel, dime and quarter are coins; everything else
-  is a note
+  is a note. These are modeled as `Item` so take a look at `model/Item` to see
+  their properties.
 
 - Drawer objects are always ordered descending by value (biggest denomination at
-  the front)
+  the front).
 
 - Value is always given as an integer in cents, and never a decimal, so a
   `value` of `210` means $2.10.
@@ -26,7 +27,7 @@ A few things you should know:
     removeItem("penny", Drawer.drawer);
 
     for (var item : Drawer.drawer) {
-      var summary = String.format("%s: %d", item.getName(), item.getQuantity());
+      var summary = String.format("%s: %d", item.name, item.quantity);
       System.out.println(summary);
     }
   }

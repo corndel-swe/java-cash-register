@@ -95,7 +95,7 @@ flowchart TD
 
 1. Complete Exercise 1a:
 
-   - Run the tests in to see if you got it right!
+   - Run the tests to see if you got it right.
 
    - Once you pass the tests, type `git commit -am "Solves 1a"` in the terminal
      and hit enter to commit your solution.

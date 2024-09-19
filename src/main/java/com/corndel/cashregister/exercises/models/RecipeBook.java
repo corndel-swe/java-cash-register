@@ -3,8 +3,8 @@ package com.corndel.cashregister.exercises.models;
 import java.util.List;
 
 public class RecipeBook {
-  private String title;
-  private List<Recipe> recipes;
+  public String title;
+  public List<Recipe> recipes;
 
   public RecipeBook(String title, List<Recipe> recipes) {
     this.title = title;

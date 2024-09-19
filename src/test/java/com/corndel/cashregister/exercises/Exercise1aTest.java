@@ -9,15 +9,13 @@ import org.junit.jupiter.api.Test;
 
 public class Exercise1aTest {
   // Sample recipes for testing
-  Recipe recipe1 =
-      new Recipe("Spaghetti Bolognese", List.of("spaghetti", "beef", "tomato sauce"), 4, false);
+  Recipe recipe1 = new Recipe("Spaghetti Bolognese", List.of("spaghetti", "beef", "tomato sauce"), 4, false);
 
-  Recipe recipe2 =
-      new Recipe(
-          "Vegetable Stir Fry",
-          List.of("broccoli", "carrots", "bell peppers", "soy sauce"),
-          2,
-          true);
+  Recipe recipe2 = new Recipe(
+      "Vegetable Stir Fry",
+      List.of("broccoli", "carrots", "bell peppers", "soy sauce"),
+      2,
+      true);
 
   @Test
   // Test for Spaghetti Bolognese

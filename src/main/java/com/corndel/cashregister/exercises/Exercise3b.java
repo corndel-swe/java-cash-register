@@ -8,7 +8,12 @@ public class Exercise3b {
    * in the book
    */
   public static int countServings(RecipeBook recipeBook) {
-    // code here
-    return 0;
+    var servings = 0;
+
+    for (var recipe : recipeBook.recipes) {
+      servings += recipe.servings;
+    }
+
+    return servings;
   }
 }
