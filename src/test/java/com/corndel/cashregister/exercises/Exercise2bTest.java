@@ -50,7 +50,8 @@ public class Exercise2bTest {
   }
 
   @Test
-  // Test to handle recipes with different properties and ensure correct titles are returned
+  // Test to handle recipes with different properties and ensure correct titles
+  // are returned
   void testVariedRecipes() {
     List<Recipe> variedRecipes = new ArrayList<>();
     variedRecipes.add(new Recipe("Salad", List.of("lettuce", "tomatoes"), 2, true));

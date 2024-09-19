@@ -14,15 +14,14 @@ public class Exercise3bTest {
   @Test
   // Test to ensure the total number of servings is correctly counted
   void testTotalServings() {
-    List<Recipe> recipes =
-        List.of(
-            new Recipe(
-                "Spaghetti Bolognese", List.of("spaghetti", "beef", "tomato sauce"), 4, false),
-            new Recipe(
-                "Vegetable Stir Fry",
-                List.of("broccoli", "carrots", "bell peppers", "soy sauce"),
-                2,
-                true));
+    List<Recipe> recipes = List.of(
+        new Recipe(
+            "Spaghetti Bolognese", List.of("spaghetti", "beef", "tomato sauce"), 4, false),
+        new Recipe(
+            "Vegetable Stir Fry",
+            List.of("broccoli", "carrots", "bell peppers", "soy sauce"),
+            2,
+            true));
 
     RecipeBook recipeBook = new RecipeBook("My Recipe Book", recipes);
 
@@ -41,10 +40,10 @@ public class Exercise3bTest {
   }
 
   @Test
-  // Test to ensure the correct number of servings is returned when there is only one recipe
+  // Test to ensure the correct number of servings is returned when there is only
+  // one recipe
   void testSingleRecipe() {
-    List<Recipe> oneRecipe =
-        List.of(new Recipe("Pancakes", List.of("flour", "milk", "eggs"), 4, true));
+    List<Recipe> oneRecipe = List.of(new Recipe("Pancakes", List.of("flour", "milk", "eggs"), 4, true));
 
     RecipeBook oneRecipeBook = new RecipeBook("Single Recipe Book", oneRecipe);
 
@@ -54,13 +53,13 @@ public class Exercise3bTest {
   }
 
   @Test
-  // Test to ensure the correct number of servings is returned with multiple recipes
+  // Test to ensure the correct number of servings is returned with multiple
+  // recipes
   void testMultipleRecipes() {
-    List<Recipe> multipleRecipes =
-        List.of(
-            new Recipe("Salad", List.of("lettuce", "tomatoes"), 2, true),
-            new Recipe("Steak", List.of("beef", "seasoning"), 3, false),
-            new Recipe("Soup", List.of("broth", "vegetables"), 4, true));
+    List<Recipe> multipleRecipes = List.of(
+        new Recipe("Salad", List.of("lettuce", "tomatoes"), 2, true),
+        new Recipe("Steak", List.of("beef", "seasoning"), 3, false),
+        new Recipe("Soup", List.of("broth", "vegetables"), 4, true));
 
     RecipeBook multipleRecipesBook = new RecipeBook("Multiple Recipes Book", multipleRecipes);
 
