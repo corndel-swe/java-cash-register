@@ -4,7 +4,6 @@ import com.corndel.cashregister.exercises.models.Recipe;
 
 public class Exercise1a {
   /**
-   * https://tech-docs.corndel.com/java/object-basics.html#accessing-public-properties
    * Accepts a recipe object and returns a summary string as below:
    * 
    * <p>
@@ -12,6 +11,10 @@ public class Exercise1a {
    * 
    * <p>
    * "Vegetable Stir Fry has 4 ingredients and serves 2 people"
+   * 
+   * <p>
+   * Note that all fields are public, so recipe.name and recipe.getName() will
+   * both work, and which you use is up to your preference.
    */
   public static String getSummary(Recipe recipe) {
     // TODO
