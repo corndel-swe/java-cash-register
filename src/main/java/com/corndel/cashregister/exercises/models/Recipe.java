@@ -3,10 +3,10 @@ package com.corndel.cashregister.exercises.models;
 import java.util.List;
 
 public class Recipe {
-  private String name;
-  private List<String> ingredients;
-  private int servings;
-  private boolean isVegetarian;
+  public String name;
+  public List<String> ingredients;
+  public int servings;
+  public boolean isVegetarian;
 
   public Recipe(String name, List<String> ingredients, int servings, boolean isVegetarian) {
     this.name = name;
