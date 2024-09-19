@@ -8,7 +8,8 @@ import java.util.List;
  *
  * <p>
  * note that we usually represent money in integers not decimals:
- * https://blog.agentrisk.com/you-better-work-in-cents-not-dollars-2edb52cdf308
+ * 
+ * @see https://blog.agentrisk.com/you-better-work-in-cents-not-dollars-2edb52cdf308
  */
 public class Drawer {
   public static List<Item> drawer = List.of(

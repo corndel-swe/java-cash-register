@@ -23,7 +23,7 @@ public class Level3Test {
         new Item("nickel", 5, 41),
         new Item("penny", 1, 72));
 
-    String expectedSum = "$335.12";
+    int expectedSum = 33512;
     // Check if the function returns the correct sum of the drawer
     assertEquals(expectedSum, sumDrawer(drawer));
   }
