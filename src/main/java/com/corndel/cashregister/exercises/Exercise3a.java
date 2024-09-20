@@ -5,8 +5,8 @@ import com.corndel.cashregister.exercises.models.RecipeBook;
 
 public class Exercise3a {
   /**
-   * Given a recipeBook containing recipes, returns the title of the last recipe
-   * in the array.
+   * Given a recipeBook containing multiple recipes, return the last recipe.
+   * Refer to exercises/models/RecipeBook to understand how recipes are stored.
    * 
    * Return null if there are no recipes.
    */
